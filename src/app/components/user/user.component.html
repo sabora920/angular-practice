@@ -1,11 +1,31 @@
-<p>
-  {{ name }}
-</p>
+<div>
+    <p>
+        {{ name }}
+      </p>
+      <ul>
+        <li>Age: {{ age }}</li>
+        <li>Address: {{ address.street }}<div>{{ address.city }}, {{address.state }}</div></li>
+      </ul>
+      <h4>Edit User</h4>
+      <form>
+        <div>
+          <input type="text" placeholder="name..." [(ngModel)]="name" name="name">          
+        </div>
+        <div>
+            <input type="number" placeholder="age..." [(ngModel)]="age" name="age">          
+        </div>
+        <div>
+            <input type="text" placeholder="street..." [(ngModel)]="address.street" name="street">          
+        </div>
+        <div>
+            <input type="text" placeholder="city..." [(ngModel)]="address.city" name="city">          
+        </div>
+        <div>
+            <input type="text" placeholder="state..." [(ngModel)]="address.state" name="state">          
+        </div>
+      </form>
+</div>
 
-<ul>
-  <li>Age: {{ age }}</li>
-  <li>Address: {{ address.street }}<div>{{ address.city }}, {{address.state }}</div></li>
-</ul>
 
 <h3>Hobbies</h3>
 <ul>
