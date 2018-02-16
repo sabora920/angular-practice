@@ -10,6 +10,7 @@
   </ul>
 
   <button (click)="toggleEdit()">Edit User</button>
+
   <div *ngIf=isEdit>
     <h4>Edit User</h4>
     <form>
@@ -33,20 +34,4 @@
 </div>
 
 
-<h3>Hobbies</h3>
-<ul>
-  <li *ngFor="let hobby of hobbies">{{ hobby }}
-    <button (click)="deleteHobby(hobby)">delete</button>
-  </li>
-</ul>
 
-<form (submit)="addHobby(hobby.value)">
-  <input type="text" placeholder="add hobby..." #hobby>
-</form>
-<button (click)="onClick()">add hobby</button>
-
-<h2>Posts</h2>
-<div *ngFor="let post of posts">
-  <h4>{{post.title}}</h4>
-  <p>{{post.body}}</p>
-</div>

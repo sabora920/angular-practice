@@ -1,0 +1,11 @@
+<h3>Hobbies</h3>
+<ul>
+  <li *ngFor="let hobby of hobbies">{{ hobby }}
+    <button (click)="deleteHobby(hobby)">delete</button>
+  </li>
+</ul>
+
+<form (submit)="addHobby()">
+  <input type="text" placeholder="add hobby..." [(ngModel)]="hobby" name="hobby">
+</form>
+<button (click)="onClick()">add hobby</button>
