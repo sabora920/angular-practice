@@ -13,10 +13,11 @@ import { PostsComponent } from './components/posts/posts.component';
 import { HobbiesComponent } from './components/hobbies/hobbies.component'
 
 const appRoutes: Routes = [
-  {path:'', component: UserComponent},
+  {path:'', component: UserComponent, pathMatch: 'full'},
   {path:'about', component: AboutComponent},
   {path:'posts', component: PostsComponent},
-  {path:'hobbies', component: HobbiesComponent}
+  {path:'hobbies', component: HobbiesComponent},
+  {path:'anotherabout', loadChildren: './user/user.module#UserModule'}
 ];
 
 @NgModule({
